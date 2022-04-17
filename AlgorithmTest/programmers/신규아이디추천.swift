@@ -62,11 +62,16 @@ https://programmers.co.kr/learn/courses/30/lessons/72410
 문제에서 요구하는 7단계를 순차적으로 구현하였다.
 swift 문법이 익숙하지 않아 문자열 처리에서 시간이 오래걸렸다.
 
-  newID = newID.replacingOccurrences(of: "..", with: ".")
-  newID = newID + String(newID.last!)
-  while newID.hasPrefix(".") { newID.removeFirst() }
-  while newID.hasSuffix(".") { newID.removeLast() }
-  newID = String(newID[newID.startIndex..<newID.index(newID.startIndex, offsetBy: 15])
+    1) replacingOccurrences - 문자열 치환
+        newID = newID.replacingOccurrences(of: "..", with: ".")
+    2) .last - The last element of the collection.
+        newID = newID + String(newID.last!)
+    3) .hasPrefix - 앞에서부터 탐색해서 일치하면 해당 값 반환
+        while newID.hasPrefix(".") { newID.removeFirst() }
+    4) .hasSuffix - 뒤에서부터 탐색해서 일치하면 해당 값 반환
+        while newID.hasSuffix(".") { newID.removeLast() }
+    5) .startIndex, .endindex - 처음과 마지막 index 반환
+        newID = String(newID[newID.startIndex..<newID.index(newID.startIndex, offsetBy: 15])
 
 다른 사람의 풀이를 통해 replacingOccurrences, hasPrefix, hasSuffix, removeFirest(), removeLast()를 알게되었다.
 또한 offsetBy를 활용하여 일종의 슬라이싱을 할 수 있다는 점을 배웠다.
