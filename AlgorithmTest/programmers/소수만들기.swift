@@ -35,5 +35,5 @@ func solution(_ nums:[Int]) -> Int {
 }
 
 // https://programmers.co.kr/learn/courses/30/lessons/12977
-// 프로그래머스 
+// 프로그래머스
 // 소수 만들기

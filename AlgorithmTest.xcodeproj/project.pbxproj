@@ -6,6 +6,10 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1128698F282CC2D3002BA764 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128698E282CC2D3002BA764 /* main.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		3E05653D27ACE66E00B2AB1F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -19,6 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1128698D282CC2D3002BA764 /* AlgorithmTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlgorithmTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		1128698E282CC2D3002BA764 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		11286991282CC334002BA764 /* 소수만들기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "소수만들기.swift"; sourceTree = "<group>"; };
+		11286992282CC363002BA764 /* 숫자문자열과영단어.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "숫자문자열과영단어.swift"; sourceTree = "<group>"; };
+		11286993282CC371002BA764 /* 신규아이디추천.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "신규아이디추천.swift"; sourceTree = "<group>"; };
+		11286994282CC37B002BA764 /* 음양더하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "음양더하기.swift"; sourceTree = "<group>"; };
 		3E05653F27ACE66E00B2AB1F /* AlgorithmTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E05654227ACE66E00B2AB1F /* BOJ1076.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ1076.swift; sourceTree = "<group>"; };
 		3E05654F27AD699600B2AB1F /* BOJ2444.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ2444.swift; sourceTree = "<group>"; };
@@ -35,6 +45,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11286990282CC2FB002BA764 /* programmers */ = {
+			isa = PBXGroup;
+			children = (
+				11286991282CC334002BA764 /* 소수만들기.swift */,
+				11286992282CC363002BA764 /* 숫자문자열과영단어.swift */,
+				11286993282CC371002BA764 /* 신규아이디추천.swift */,
+				11286994282CC37B002BA764 /* 음양더하기.swift */,
+			);
+			path = programmers;
+			sourceTree = "<group>";
+		};
+		11286995282CC3B9002BA764 /* baekjoon */ = {
+			isa = PBXGroup;
+			children = (
+				3E05654227ACE66E00B2AB1F /* BOJ1076.swift */,
+				3E05654F27AD699600B2AB1F /* BOJ2444.swift */,
+			);
+			path = baekjoon;
+			sourceTree = "<group>";
+		};
 		3E05653627ACE66E00B2AB1F = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +84,10 @@
 		3E05654127ACE66E00B2AB1F /* AlgorithmTest */ = {
 			isa = PBXGroup;
 			children = (
-				3E05654227ACE66E00B2AB1F /* BOJ1076.swift */,
-				3E05654F27AD699600B2AB1F /* BOJ2444.swift */,
+				11286995282CC3B9002BA764 /* baekjoon */,
+				11286990282CC2FB002BA764 /* programmers */,
+				1128698E282CC2D3002BA764 /* main.swift */,
+				1128698D282CC2D3002BA764 /* AlgorithmTest-Bridging-Header.h */,
 			);
 			path = AlgorithmTest;
 			sourceTree = "<group>";
@@ -92,7 +124,7 @@
 				TargetAttributes = {
 					3E05653E27ACE66E00B2AB1F = {
 						CreatedOnToolsVersion = 13.2.1;
-						LastSwiftMigration = 1320;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -119,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1128698F282CC2D3002BA764 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +286,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlgorithmTest/AlgorithmTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -271,6 +305,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlgorithmTest/AlgorithmTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
