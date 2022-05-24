@@ -11,7 +11,9 @@ func solution(_ board:[[Int]]) -> Int {
     let x = board.count
     let y = board[0].count
     var answer:Int = 0
-    var copy = board.map{$0.map{$0}};
+    
+//    var copy = board    // 1
+    var copy = board.map{$0.map{$0}}
     
     for i in 0..<x {
         if board[i][0] == 1 {
@@ -41,3 +43,8 @@ func solution(_ board:[[Int]]) -> Int {
 print(solution([[0,0,1,1],[1,1,1,1]]))  // 4
 print(solution([[0,1,1,1],[1,1,1,1],[1,1,1,1],[0,0,1,0]]))  // 9
 print(solution([[0, 0, 0, 0],[1, 0, 0, 0],[1, 0, 0, 0],[0, 0, 0, 0]])) // 1
+
+/*
+ 1) 탐나에게 배운 지식
+    Swift에선 배열의 deepcopy를 단순히 저렇게 해도 잘 된다.
+ */
