@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		1128698E282CC2D3002BA764 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		11286997282F56F0002BA764 /* AlgorithmTest-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AlgorithmTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		118F5CA3283DDB8500BDFB76 /* 카펫.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "카펫.swift"; sourceTree = "<group>"; };
 		11AB998F283A478600D553E7 /* BOJ1000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ1000.swift; sourceTree = "<group>"; };
 		11AB9990283A479100D553E7 /* BOJ2444.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ2444.swift; sourceTree = "<group>"; };
 		11AB9991283A479100D553E7 /* BOJ1076.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ1076.swift; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 				11AB9998283A47B600D553E7 /* 큰수만들기.swift */,
 				11AB9999283B383A00D553E7 /* 가장큰정사각형찾기.swift */,
 				11AB999A283C8A6200D553E7 /* 방문길이.swift */,
+				118F5CA3283DDB8500BDFB76 /* 카펫.swift */,
 			);
 			path = programmers;
 			sourceTree = "<group>";
