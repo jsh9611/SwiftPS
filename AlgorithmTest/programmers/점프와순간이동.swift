@@ -18,5 +18,5 @@ func solution(_ n:Int) -> Int {
     return ans
 }
 
-// 60점
+// 60점 - 효율성 테스트 통과못함
 func solution2(_ n:Int) -> Int { String(n, radix: 2).filter { $0 == "1" }.count }
