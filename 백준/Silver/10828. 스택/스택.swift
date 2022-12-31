@@ -1,10 +1,10 @@
 let n = Int(readLine()!)!
-var arr: [Int] = []
+var arr: [String] = []
 for _ in 0..<n {
-    let cmd = readLine()!.split(separator: " ").map{($0)}
+    let cmd = readLine()!.split{ $0 == " " }.map{ String($0) }
     switch cmd[0] {
     case "push":
-        arr.append(Int(cmd[1])!)
+        arr.append(cmd[1])
     case "pop":
         if let last = arr.popLast() {
             print(last)
