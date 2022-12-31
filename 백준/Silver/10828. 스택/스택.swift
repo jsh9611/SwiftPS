@@ -6,22 +6,12 @@ for _ in 0..<n {
     case "push":
         arr.append(cmd[1])
     case "pop":
-        if let last = arr.popLast() {
-            print(last)
-        } else {
-            print(-1)
-        }
+        print(arr.isEmpty ? -1 : arr.removeLast())
     case "size":
         print(arr.count)
     case "empty":
         print(arr.isEmpty ? 1 : 0)
-    case "top":
-        if let top = arr.last {
-            print(top)
-        } else {
-            print(-1)
-        }
     default:
-        print("ERROR!!")
+        print(arr.isEmpty ? -1 : arr.last!)
     }
 }
