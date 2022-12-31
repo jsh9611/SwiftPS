@@ -1,19 +1,18 @@
-var leftSide = readLine()!
-var rightSide = ""
+var leftSide = Array(readLine()!)
+var rightSide: [Character] = []
 
 for _ in 0..<Int(readLine()!)! {
-    let cmd = readLine()!
+    var cmd = readLine()!
     
-    switch cmd.first! {
+    switch cmd {
     case "L":
-        if !leftSide.isEmpty { rightSide.append(leftSide.popLast()!) }
+        if !leftSide.isEmpty { rightSide.append(leftSide.removeLast()) }
     case "D":
-        if !rightSide.isEmpty { leftSide.append(rightSide.popLast()!) }
+        if !rightSide.isEmpty { leftSide.append(rightSide.removeLast()) }
     case "B":
-        if !leftSide.isEmpty { let _ = leftSide.popLast()! }
+        if !leftSide.isEmpty { leftSide.removeLast() }
     default:  // case "P $":
         leftSide.append(cmd.last!)
     }
 }
-
-print("\(leftSide)\(String(rightSide.reversed()))")
+print(String(leftSide + rightSide.reversed()))
