@@ -1,6 +1,5 @@
-let n = Int(readLine()!)!
 var arr: [String] = []
-for _ in 0..<n {
+for _ in 0..<Int(readLine()!)! {
     let cmd = readLine()!.split{ $0 == " " }.map{ String($0) }
     switch cmd[0] {
     case "push":
