@@ -2,7 +2,7 @@ var leftSide = Array(readLine()!)
 var rightSide: [Character] = []
 
 for _ in 0..<Int(readLine()!)! {
-    var cmd = readLine()!
+    let cmd = readLine()!
     
     switch cmd {
     case "L":
