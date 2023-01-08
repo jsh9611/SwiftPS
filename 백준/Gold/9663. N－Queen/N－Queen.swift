@@ -1,44 +1,35 @@
 func solution(_ n:Int) -> Int {
-    // nqueen을 dfs로 구현
-    func nqueen(col: Int) {
-        // 모든 행에 퀸을 놓을 수 있다면 1을 더한다
-        if col == n {
+
+    func nqueen(rightDown: Int, lookDown: Int, leftDown: Int) {
+        // 퀸을 모두 놓을 수 있는 경우
+        if lookDown == done {
             count += 1
             return
         }
+        // 충돌 체크
+        // 왼쪽 대각, 오른쪽 대각, 정면을 합해서 구한다.
+        // 이후 연산을 위해 미리 보수를 취한다.
+        var poss = ~(rightDown | lookDown | leftDown)
 
-        for i in 0..<n {
-            // 같은 열에 퀸이 이미 있는 경우 스킵한다
-            if visited[i] {
-                continue
-            }
-            board[col] = i
-            // 대각선에 존재하지 않는 경우 해당 열을 방문처리하고 다음 행에 대해 진행한다.
-            if isPlaceable(col) {
-                visited[i] = true
-                nqueen(col: col+1)
-                visited[i] = false
-            }
+        // 비여있는 자리 있는지 체크
+        // 놓을 수 있는 곳이 없을 때 까지 반복한다.
+        while (poss & done) != 0 {
+            
+            // 빈자리의 위치를 구한다.
+            let bit = poss & -poss
+            
+            // 퀸을 놓은 위치를 더해준다.
+            poss -= bit
+            
+            // 왼쪽, 오른쪽 대각선은 비트와 논리합을 해준 뒤 한칸씩 시프트 한다.
+            // 정면은 비트와 논리합만 해줘도 된다.
+            nqueen(rightDown: (rightDown | bit)>>1, lookDown: (lookDown | bit), leftDown: (leftDown | bit)<<1)
         }
     }
-    // 퀸이 대각선상에 있는지 체크놓을 수 있는지 체크
-    func isPlaceable(_ col: Int) -> Bool {
-        for j in 0..<col {
-            if abs(col - j) == (abs(board[col] - board[j])) {
-                return false
-            }
-        }
-        return true
-    }
-    // 퀸을 놓을 수 있는 보드를 만든다.
-    // board[3] = 4 (4,3에 퀸이 놓여있다)
-    var board: [Int] = Array(repeating: -1, count:15)
-
-    // 열에 이미 방문했는지 확인하는 용도
-    var visited: [Bool] = Array(repeating: false, count: 15)
-
+    
+    let done = 1<<n - 1
     var count = 0
-    nqueen(col: 0)
+    nqueen(rightDown: 0, lookDown: 0, leftDown: 0)
     return count
 }
 
